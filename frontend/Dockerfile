@@ -1,11 +1,11 @@
-## base image
-FROM node:alpine
+FROM ubuntu:18.04
 
 ## set working directory
+RUN apt-get update
+RUN apt-get install curl -y
 WORKDIR /frontend
-COPY package.json .
-RUN npm install
 COPY . .
-
+RUN sh ./util/install-nodejs-npm.sh
+RUN npm install
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["sh", "start.sh"]
