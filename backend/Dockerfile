@@ -1,5 +1,4 @@
-FROM ubuntu:18.04
-RUN apt-get update -y
+FROM portfolio_base_image
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get install python3.8 -y

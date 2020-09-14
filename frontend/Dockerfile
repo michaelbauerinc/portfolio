@@ -1,8 +1,6 @@
-FROM ubuntu:18.04
+FROM portfolio_base_image
 
 ## set working directory
-RUN apt-get update
-RUN apt-get install curl -y
 WORKDIR /frontend
 COPY . .
 RUN sh ./util/install-nodejs-npm.sh
