@@ -1,5 +1,11 @@
 version: '3'
 services:
+  nginx:
+    build: ./nginx
+    ports:
+        - "80:80"
+    volumes:
+        - /Users/michael/Documents/Code/portfolio/nginx:/nginx
   backend:
     build: ./backend
     ports:
