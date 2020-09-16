@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import './SideDrawer.css'
-import SideDrawerProps from './SideDrawerProps.Interface'
+import { SideDrawerProps } from './SideDrawerProps.Interface'
 
 export const SideDrawer: FC<SideDrawerProps> = ({ show }) => {
     let drawerClasses: string = 'side-drawer';

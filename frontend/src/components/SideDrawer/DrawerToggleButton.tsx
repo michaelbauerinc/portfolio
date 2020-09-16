@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import './DrawerToggleButton.css';
-import { DrawerToggleButtonProps } from '/DrawerToggleButtonProps.Interface'
+import { DrawerToggleButtonProps } from './DrawerToggleButtonProps.Interface'
 
 export const DrawerToggleButton: FC<DrawerToggleButtonProps> = ({ click }) => {
     return (

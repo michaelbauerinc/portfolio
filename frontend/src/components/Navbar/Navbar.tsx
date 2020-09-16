@@ -24,7 +24,7 @@ export class Navbar extends Component {
     }
 
     private handleBackdrop() {
-        this.state.backDrop = this.state.sideDrawerOpen ? null : <Backdrop click={this.backdropClickHandler} />;
+        this.setState({ backDrop: this.state.sideDrawerOpen ? null : <Backdrop click={this.backdropClickHandler} /> });
     }
 
     private backdropClickHandler() {
