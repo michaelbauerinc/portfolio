@@ -4,7 +4,7 @@ import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 import SideDrawer from '../SideDrawer/SideDrawer'
 import './Navbar.css'
 import { NavBarConditions } from './Navbar.Interface'
-
+import { Link } from 'react-router-dom'
 
 export class Navbar extends Component {
     constructor(props: any) {
@@ -44,14 +44,23 @@ export class Navbar extends Component {
                             <DrawerToggleButton click={this.drawerToggleClickHandler} />
                         </div>
                         <div className="navbar-logo">
-                            <a href="">LOGOHERE</a>
+                            <a href="/">MB</a>
                         </div>
                         <span className="space-buffer" />
                         <div className="navbar-items">
                             <ul>
-                                <li><a href="">Home</a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Works</a></li>
+                                <Link to="/home">
+                                    <li>Home</li>
+                                </Link>
+                                <Link to="/about">
+                                    <li>About</li>
+                                </Link>
+                                <Link to="/works">
+                                    <li>Works</li>
+                                </Link>
+                                <Link to="/contact">
+                                    <li>Contact</li>
+                                </Link>
                             </ul>
                         </div>
                     </nav>

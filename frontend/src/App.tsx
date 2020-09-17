@@ -1,17 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Home from './components/Home/Home';
+import SplashPage from './components/SplashPage/SplashPage';
+import Background from './components/Background/Background';
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-      <div className="main">
-        <h1>Home</h1>
-      </div>
+      <Router>
+        <Navbar />
+        <Background />
+        <div className="main">
+          <Route path="/" exact component={SplashPage} />
+          <Route path="/home" exact component={Home} />
+        </div>
+      </Router>
     </div>
   );
 }

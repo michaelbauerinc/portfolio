@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     position: fixed;
-    background-color: blue;
+    background-color: rgb(255, 255, 128);
     height: 56px;
 }
 
@@ -16,10 +16,15 @@
 
 .navbar-logo {
     margin-left: 1rem;
+    text-decoration: none;
+    font-family: '8BITWONDERNominal';
+    font-weight: bold;
+    font-style: normal;
+    background-color:rgb(230, 250, 255);
 }
 
 .navbar-logo a {
-    color: white;
+    color: rgb(115, 0, 153);
     text-decoration: none;
     font-size: 1.5rem;
 }
@@ -40,13 +45,17 @@
 }
 
 .navbar-items a {
-    color: white;
+    color: rgb(115, 0, 153);
     text-decoration: none;
+    font-family: '8BITWONDERNominal';
+    font-weight: normal;
+    font-style: normal;
 }
 
 .navbar-items a:hover,
 .navbar-items a:active {
-    color: yellow;
+    color: rgb(255, 26, 255);
+    font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {

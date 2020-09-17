@@ -18,11 +18,5 @@
 .toggle-button-line {
     width: 30px;
     height: 2px;
-    background: white;
+    background: rgb(115, 0, 153);
 }
-
-/* @media (min-width: 769) {
-    .toggle-button {
-        display: none
-    }
-} */
