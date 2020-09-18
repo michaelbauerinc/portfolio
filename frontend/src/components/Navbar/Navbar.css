@@ -58,14 +58,14 @@
     font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 824px) {
     .navbar-items {
         display: none
     }
 }
 
 
-@media (min-width: 769px) {
+@media (min-width: 823) {
     .navbar-toggle-button {
         display: none;
     }

@@ -1,3 +1,45 @@
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+    visibility: visible;
+    transform: translateX(200%);
+    }
+    100% {
+    visibility: visible;
+    transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+    visibility: visible;
+    transform: translateY(200%);
+    }
+    100% {
+    visibility: visible;
+    transform: translateY(0);
+    }
+}
+
+@keyframes appear {
+    0% {
+    visibility: hidden;
+    }
+    100% {
+    visibility: visible;
+    }
+}
+
+
+
 .splash-page-container {
     position: absolute;
     text-align: center;
@@ -11,7 +53,7 @@
 }
 
 .splash-page-container h1 {
-    display: inline;
+    display: inline-block;
     padding: 0 2%;
 }
 
@@ -19,7 +61,60 @@
     padding-top: 5.5%;
 }
 
+.first-name {
+    animation: slideInFromLeft 1s;
+}
 
+.last-name {
+    visibility: hidden;
+    animation: slideInFromRight 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+.tag {
+    visibility: hidden;
+    animation: slideInFromBottom 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+}
+
+.enter-button {
+    margin-top: 10%;
+    visibility: hidden;
+    animation: appear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background-color:rgb(255, 255, 128);
+	border-radius:6px;
+	border:1px solid rgb(255, 255, 128);
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:15px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+
+.enter-button:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.enter-button:active {
+	position:relative;
+	top:1px;
+}
+
+a {
+    color: rgb(115, 0, 153);
+    text-decoration: none;
+    font-family: '8BITWONDERNominal';
+    font-weight: bold;
+    font-style: normal;
+}
 @media (max-width: 768px) {
     .splash-page-container {
         font-size: .8rem;
@@ -30,3 +125,23 @@
         padding-top: 20%;
     }
 }
+
+@media (max-width: 1024px) {
+    .splash-page-container {
+        font-size: .8rem;
+        padding-top: 40%;
+    }
+
+    .splash-page-container h2 {
+        padding-top: 10%;
+    }
+}
+
+@media (max-width: 1024px) and (orientation:landscape) {
+    .splash-page-container {
+        padding-top: 2%;
+    }
+    .splash-page-container h2 {
+        padding-top: 3.5%;
+    }
+ }
