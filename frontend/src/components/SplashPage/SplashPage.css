@@ -86,14 +86,15 @@
     animation-fill-mode: forwards;
     animation-delay: 2s;
     box-shadow:inset 0px 1px 0px 0px #fff6af;
-	background-color:rgb(255, 255, 128);
+    background-color:rgb(255, 255, 128);
+    color: rgb(115, 0, 153);
 	border-radius:6px;
 	border:1px solid rgb(255, 255, 128);
 	display:inline-block;
 	cursor:pointer;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
+    font-family: '8BITWONDERNominal';
+    font-weight: bold;
+    font-style: normal;
 	padding:15px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffee66;
@@ -106,14 +107,6 @@
 .enter-button:active {
 	position:relative;
 	top:1px;
-}
-
-a {
-    color: rgb(115, 0, 153);
-    text-decoration: none;
-    font-family: '8BITWONDERNominal';
-    font-weight: bold;
-    font-style: normal;
 }
 @media (max-width: 768px) {
     .splash-page-container {
