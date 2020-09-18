@@ -5,6 +5,7 @@
     position: fixed;
     background-color: rgb(255, 255, 128);
     height: 56px;
+    z-index: 500;
 }
 
 .navbar-navigation {
