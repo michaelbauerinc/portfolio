@@ -12,6 +12,10 @@ services:
         - "5000:5000"
     volumes:
         - /Users/michael/Documents/Code/portfolio/backend:/backend
+    environment:
+        - EMAIL_ADDRESS
+        - EMAIL_USER
+        - EMAIL_PASSWORD
   frontend:
     stdin_open: true
     build: ./frontend
