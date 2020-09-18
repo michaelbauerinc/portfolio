@@ -4,7 +4,6 @@ import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 import SideDrawer from '../SideDrawer/SideDrawer'
 import './Navbar.css'
 import { NavBarConditions } from './Navbar.Interface'
-import { Link } from 'react-router-dom'
 
 export class Navbar extends Component {
     constructor(props: any) {
@@ -49,18 +48,11 @@ export class Navbar extends Component {
                         <span className="space-buffer" />
                         <div className="navbar-items">
                             <ul>
-                                <Link to="/home">
-                                    <li>Home</li>
-                                </Link>
-                                <Link to="/about">
-                                    <li>About</li>
-                                </Link>
-                                <Link to="/works">
-                                    <li>Works</li>
-                                </Link>
-                                <Link to="/contact">
-                                    <li>Contact</li>
-                                </Link>
+                                <li><a href="/home">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/demo">Demo</a></li>
+                                <li><a href="https://github.com/michaelbauerinc" rel="noopener noreferrer" target="_blank">Works</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </nav>
