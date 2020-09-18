@@ -139,6 +139,15 @@ a {
 
 @media (max-width: 1024px) and (orientation:landscape) {
     .splash-page-container {
+        padding-top: 15%;
+    }
+    .splash-page-container h2 {
+        padding-top: 3.5%;
+    }
+ }
+
+@media (max-width: 1023px) and (orientation:landscape) {
+    .splash-page-container {
         padding-top: 2%;
     }
     .splash-page-container h2 {

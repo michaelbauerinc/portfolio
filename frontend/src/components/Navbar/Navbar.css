@@ -65,7 +65,7 @@
 }
 
 
-@media (min-width: 823) {
+@media (min-width: 824px) {
     .navbar-toggle-button {
         display: none;
     }
