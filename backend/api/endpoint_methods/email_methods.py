@@ -35,7 +35,7 @@ class EmailMethods:
                 </style>
 
                 <body>
-                    <h1>From: {self.data["sender"]}</h1>
+                    <h1>From: {self.data["name"]} - {self.data["sender"]}</h1>
                     <p>{self.data["content"]}</p>
                 </body>
 
@@ -46,4 +46,4 @@ class EmailMethods:
 
             smtp.send_message(msg)
 
-        return f"Success - email sent to {EMAIL_ADDRESS}"
+        return f"Success - email sent."

@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import SplashPage from './components/SplashPage/SplashPage';
 import Background from './components/Background/Background';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" exact component={SplashPage} />
           <Route path="/home" exact component={Home} />
           <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} />
         </div>
       </Router>
     </div>

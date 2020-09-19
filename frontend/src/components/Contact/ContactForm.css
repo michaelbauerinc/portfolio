@@ -1,0 +1,38 @@
+.contact-form-container {
+    height: 100%;
+}
+
+.contact-form-container h1 {
+    text-align: center;
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container label {
+    padding: 1% 0%;
+}
+
+.contact-form-container input {
+    width: 50%;
+}
+
+.contact-form-container textarea {
+    margin: 1% 0;
+    width: 80%;
+    height: 300px;
+    resize: none;
+}
+.contact-form-container button {
+    width: 80px;
+    font-family: '8BITWONDERNominal';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.error {
+    padding: 1% 0;
+    color: red;
+}
