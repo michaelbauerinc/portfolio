@@ -16,6 +16,7 @@ services:
         - EMAIL_ADDRESS
         - EMAIL_USER
         - EMAIL_PASSWORD
+        - ENVIRONMENT_TYPE
   frontend:
     stdin_open: true
     build: ./frontend
@@ -23,3 +24,5 @@ services:
         - "3000:3000"
     volumes:
         - /Users/michael/Documents/Code/portfolio/frontend:/frontend
+    environment:
+        - ENVIRONMENT_TYPE
