@@ -8,7 +8,7 @@ WORKDIR /nginx
 COPY . .
 WORKDIR /nginx/utils
 RUN sh install-nginx.sh
-RUN cp nginx.conf /etc/nginx
+RUN sh ./utils/gen-conf-from-template.sh
 WORKDIR /nginx
 EXPOSE 80
 CMD ["sh", "start.sh"]

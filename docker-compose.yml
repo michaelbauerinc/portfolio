@@ -5,13 +5,16 @@ services:
     ports:
         - "80:80"
     volumes:
-        - /Users/michael/Documents/Code/portfolio/nginx:/nginx
+        - /${NGINX_VOLUME}:/nginx
+    environment:
+        - FE_DOMAIN
+        - BE_DOMAIN
   backend:
     build: ./backend
     ports:
         - "5000:5000"
     volumes:
-        - /Users/michael/Documents/Code/portfolio/backend:/backend
+        - /${BACKEND_VOLUME}:/backend
     environment:
         - EMAIL_ADDRESS
         - EMAIL_USER
@@ -23,6 +26,7 @@ services:
     ports:
         - "3000:3000"
     volumes:
-        - /Users/michael/Documents/Code/portfolio/frontend:/frontend
+        - /${FRONTEND_VOLUME}:/frontend
+        - /frontend/node_modules
     environment:
         - ENVIRONMENT_TYPE
