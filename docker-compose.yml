@@ -9,6 +9,9 @@ services:
     environment:
         - FE_DOMAIN
         - BE_DOMAIN
+    depends_on:
+        - frontend
+        - backend
   backend:
     build: ./backend
     ports:

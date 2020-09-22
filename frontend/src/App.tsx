@@ -7,6 +7,7 @@ import SplashPage from './components/SplashPage/SplashPage';
 import Background from './components/Background/Background';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Demo from './components/Demo/Demo';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/home" exact component={Home} />
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
+          <Route path="/demo" exact component={Demo} />
         </div>
       </Router>
     </div>
