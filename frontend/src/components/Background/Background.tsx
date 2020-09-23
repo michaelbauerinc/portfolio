@@ -7,11 +7,20 @@ interface BackgroundProps {
 
 }
 
+
+
 export const Background: FC<BackgroundProps> = () => {
-    const autoPlay = true;
+    const autoPlay: boolean = true;
+
+    // Hacky workaround for iOS loop
+    const handleVideoReset = () => {
+        let video = (document.getElementById("video") as HTMLVideoElement);
+        video.currentTime = 0
+        video.play()
+    };
     return (
         <div className="background-container">
-            <video src={background} className="background-video" autoPlay={autoPlay} muted={true} loop={true} playsInline={true}>
+            <video id="video" src={background} className="background-video" autoPlay={autoPlay} muted={true} playsInline={true} onEnded={handleVideoReset}>
             </video>
         </div>
     )
