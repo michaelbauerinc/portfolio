@@ -11,11 +11,8 @@ export const Background: FC<BackgroundProps> = () => {
     const autoPlay = true;
     return (
         <div className="background-container">
-            <video className="background-video" autoPlay={autoPlay} muted loop playsInline>
-                <source src={background} type="video/mp4" />
-                <source src={background} type="video/ogg" />
-    Your browser does not support the video tag.
-        </video>
+            <video src={background} className="background-video" autoPlay={autoPlay} muted={true} loop={true} playsInline={true}>
+            </video>
         </div>
     )
 }
