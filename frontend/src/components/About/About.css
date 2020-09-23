@@ -46,6 +46,11 @@
     animation: slideInFromLeft 0.5s
 }
 
+.about-container-content img {
+  width: 500px;
+  height: 350px;
+}
+
 
 .top-container {
     padding: 5% 5%;
@@ -77,11 +82,10 @@
 
 
 @media (max-width: 824px) {
-    .top-container img {
-        height: 100px;
-        width: 100px;
-        padding-top: 2%;
-    }
+  .about-container-content img {
+    width: 250px;
+    height: 175px;
+  }
 }
 
 @media only screen 
@@ -96,9 +100,9 @@
     .bottom-container {
         font-size: 1.5rem;
     }
-    
-    .top-container img {
-        height: 100px;
-        width: 100px;
+
+    .about-container-content img {
+      width: 550px;
+      height: 375px;
     }
 }

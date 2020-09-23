@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import './About.css'
 import { Bar } from "react-chartjs-2";
+import headshot from './headshot.jpg';
 
 // import { AboutProps } from './About.Interface'
 
@@ -35,7 +36,7 @@ export const About: FC<AboutProps> = () => {
         <div className="about-container">
             <div className="about-container-content">
                 <div className="top-container">
-                    <h1>Picture Here</h1>
+                    <img src={headshot} alt="headshot"></img>
                 </div>
                 <div className="bottom-container">
                     <p>I was born and raised in Wadsworth, Ohio - a small suburb right outside of Akron. I currently live in Gainesville, FL. Growing up, I had a very organic love affair with computers and technology.
