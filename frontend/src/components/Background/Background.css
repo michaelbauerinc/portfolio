@@ -11,4 +11,5 @@ video {
   background-size: cover;
   border-bottom: 1px solid transparent;
   transition: 1s opacity;
+  background-image: url("background.png")
 }
