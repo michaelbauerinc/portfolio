@@ -9,18 +9,14 @@ interface BackgroundProps {
 
 export const Background: FC<BackgroundProps> = () => {
     const autoPlay = true;
-    // Use dangerouslySetInnerHTML to fix mobile browser issue
     return (
-        <div className="background-container" dangerouslySetInnerHTML={{
-            __html: `
-            <video className="background-video" autoPlay=${autoPlay} muted loop autoBuffer>
-                <source src=${background} type="video/mp4" />
-                <source src=${background} type="video/ogg" />
-                Your browser does not support the video tag.
+        <div className="background-container">
+            <video className="background-video" autoPlay={autoPlay} muted loop playsInline>
+                <source src={background} type="video/mp4" />
+                <source src={background} type="video/ogg" />
+    Your browser does not support the video tag.
         </video>
-        
-        ` }}></div>
-
+        </div>
     )
 }
 
