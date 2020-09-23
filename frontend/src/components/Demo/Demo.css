@@ -87,6 +87,19 @@
     color:rgb(115, 0, 153);
 }
 
+.request-success-item {
+  border: 1px solid #000000;
+  background-color: rgb(255, 255, 128);
+  width: 50%;
+  margin: 5% 0;
+  padding: 0 2%;
+  word-wrap: break-word;
+}
+
+.request-success-item p {
+  font-size: 1rem;
+}
+
 .demo-container-content textarea {
   margin: 1% 0;
   width: 80%;
@@ -95,7 +108,7 @@
 }
 .demo-container-content button {
   margin-top: 2%;
-  width: 80px;
+  width: 100px;
   font-family: '8BITWONDERNominal';
   font-weight: bold;
   font-style: normal;
@@ -108,11 +121,23 @@
 
 
 @media (max-width: 824px) {
-    .top-container img {
-        height: 100px;
-        width: 100px;
-        padding-top: 2%;
-    }
+  .request-success-item {
+    width: 80%;
+    padding: 1% 5%;
+  }
+  .bottom-container .demo-option {
+    margin: 10% auto;
+    
+  }
+  .bottom-container label {
+    padding: 3% 0%;
+  }
+  .demo-container-content button {
+    margin-top: 5%;
+  }
+  .bottom-container input {
+    width: 40%;
+  }
 }
 
 @media only screen 

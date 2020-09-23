@@ -56,3 +56,6 @@ class Demo(DemoMethods, EndpointDataHandler, Resource):
 
     def post(self):
         return self.add_demo_item()
+
+    def patch(self):
+        return self.modify_demo_item()

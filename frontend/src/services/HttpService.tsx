@@ -15,9 +15,18 @@ export class HttpService {
             return err
         }
     }
-    static async get(endpoint: string, data: Record<string, string>) {
+    static async get(endpoint: string, data: Record<string, string> | Record<string, boolean>) {
         try {
             let response: AxiosResponse = await this.axios.get(endpoint, { params: data })
+            return response
+        } catch (err) {
+            return err
+        }
+    }
+
+    static async patch(endpoint: string, data: Record<string, string> | Record<string, boolean>) {
+        try {
+            let response: AxiosResponse = await this.axios.patch(endpoint, data)
             return response
         } catch (err) {
             return err
