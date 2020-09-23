@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Setup .env
+touch .env
+echo "REACT_APP_BE_DOMAIN=${BE_DOMAIN}" > .env
+
 echo "Starting frontend with environment type $ENVIRONMENT_TYPE"
 
 if [ $ENVIRONMENT_TYPE = "production" ]; then

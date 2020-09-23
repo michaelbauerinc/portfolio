@@ -1,11 +1,10 @@
 import axios, { AxiosResponse } from 'axios';
 
-
 export class HttpService {
-    private static BE_DOMAIN = process.env["BE_DOMAIN"];
+    private static BE_DOMAIN = process.env.REACT_APP_BE_DOMAIN;
     private static axios = axios.create({
         // .. where we make our configurations
-        baseURL: 'http://api.localhost'
+        baseURL: `http://${HttpService.BE_DOMAIN}`
     });
     static async post(endpoint: string, data: Record<string, string>) {
         try {

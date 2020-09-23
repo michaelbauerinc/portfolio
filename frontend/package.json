@@ -14,6 +14,7 @@
     "@types/react-router-dom": "^5.1.5",
     "axios": "^0.20.0",
     "chart.js": "^2.9.3",
+    "env-cmd": "^10.1.0",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.10.0",
     "react-dom": "^16.13.1",
@@ -23,11 +24,11 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "env-cmd -f /frontend/.env react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-prod": "serve -s build -l 3000 -n"
+    "start-prod": "env-cmd -f /frontend/.env serve -s build -l 3000 -n"
   },
   "eslintConfig": {
     "extends": "react-app"
