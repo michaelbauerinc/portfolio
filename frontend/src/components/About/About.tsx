@@ -38,12 +38,12 @@ export const About: FC<AboutProps> = () => {
                     <h1>Picture Here</h1>
                 </div>
                 <div className="bottom-container">
-                    <p>I was born and raised in Wadsworth, Ohio - a small suburb right outside Akron. I currently live in Gainesville, FL. Growing up, I had a very organic love affair with computers and technology.
-                    From hacking my dad's password with the terminal in order to partition the family computer's drive to modding and creating video games, my attraction to tech has always been insatiable.
+                    <p>I was born and raised in Wadsworth, Ohio - a small suburb right outside of Akron. I currently live in Gainesville, FL. Growing up, I had a very organic love affair with computers and technology.
+                    Around age 4, I had my first experience with a computer - the Macintosh LCIII. From that point on, it was off to the races.
                     </p>
                     <p>
                         In 2019, I graduated with my bachelor's degree and have been working as a professional developer for over a year. I have a great passion for learning new things, and I am always looking for new opportunities.
-                        I thrive in environments that require creativity, problem solving, communication, and a sickening work ethic. If this sounds like something you can get behind, you can contact me <span><a href="/contact">here</a></span>.
+                        I thrive in environments that require <span>creativity</span>, <span>problem solving</span>, <span>communication</span>, and a <span>sickening work ethic</span>. If this sounds like something you can get behind, contact me <span><a href="/contact">here</a></span>.
                     </p>
                     <h3>Get To Know Me:</h3>
                     <div className="personality-graph">
