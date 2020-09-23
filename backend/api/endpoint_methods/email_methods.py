@@ -1,6 +1,5 @@
 from run import db
 import os
-from database.models import User
 import smtplib
 from email.message import EmailMessage
 

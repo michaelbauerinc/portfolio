@@ -1,35 +1,38 @@
 import React, { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import './ContactForm.css'
-import axios from 'axios';
+import { AxiosResponse } from 'axios';
+import { HttpService } from '../../services/HttpService';
 
 
-interface ContactInfo {
-    name: string,
-    sender: string;
-    subject: string,
-    content: string
-}
+// interface ContactInfo {
+//     name: string,
+//     sender: string;
+//     subject: string,
+//     content: string
+// }
 
 export const ContactForm: FC = () => {
     const [success, setSuccess] = useState(Boolean);
-    const { register, handleSubmit, errors } = useForm<ContactInfo>()
-    const onSubmit = handleSubmit(async (data: ContactInfo) => {
-        await axios.post('http://api.localhost/email', data)
-            .then((response) => {
-                if (response.status === 200) {
-                    setSuccess(true);
-                }
-            }, (error) => {
-                // TODO: Error handling
-                // console.log(error);
-            });
-    })
+    const service = HttpService;
+    const { register, handleSubmit, errors } = useForm<Record<string, string>>()
+    const onSubmit = (data: Record<string, string>) => service.post("/email", data)
+        .then((response: AxiosResponse) => {
+            if (response.status === 200) {
+                setSuccess(true);
+            }
+            else {
+                // TODO: error handling
+                // console.log(response.message)
+            }
+        }
+        );
+
     if (!success) {
         return (
             <div className="contact-form-container">
                 <h1>Lets chat.</h1>
-                < form onSubmit={onSubmit}>
+                < form onSubmit={handleSubmit(onSubmit)}>
                     <label htmlFor="name">Name</label>
                     <input ref={register({ required: true })} className="name" name="name" type="text"></input>
 

@@ -1,5 +1,6 @@
 from run import db
 from os import path
+from database.models import Demo
 
 
 def create_db_if_not_exists():

@@ -1,6 +1,5 @@
 from flask_restful import Resource
-from run import db
-from api.endpoint_methods.email_methods import EmailMethods
+from api.endpoint_methods import EmailMethods, DemoMethods
 import json
 from flask import request
 
@@ -16,7 +15,6 @@ class EndpointDataHandler(object):
         self.data = None
         self.get_data_or_query_params_from_request()
 
-    # @log()
     def get_data_or_query_params_from_request(self):
         if request.args:
             self.data = self.get_query_parameters_from_request()
@@ -34,10 +32,8 @@ class EndpointDataHandler(object):
         for key, value in data.items():
             try:
                 data[key] = json.loads(value)
-            except JSONDecodeError:
-                logger.debug(
-                    f"could not parse string as JSON, leaving as string: {value}"
-                )
+            except:
+                pass
         return data
 
 
@@ -48,3 +44,15 @@ class Email(EmailMethods, EndpointDataHandler, Resource):
 
     def post(self):
         return self.send_email()
+
+
+class Demo(DemoMethods, EndpointDataHandler, Resource):
+    """
+    Handles sending email data from frontend
+    """
+
+    def get(self):
+        return self.get_demo_item()
+
+    def post(self):
+        return self.add_demo_item()
