@@ -34,3 +34,4 @@ services:
     environment:
         - ENVIRONMENT_TYPE
         - BE_DOMAIN
+        - CI=true

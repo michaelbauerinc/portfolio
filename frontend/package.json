@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-prod": "env-cmd -f /frontend/.env serve -s build -l 3000 -n"
+    "start-prod": "/root/.nvm/versions/node/v12.18.3/bin/env-cmd -f /frontend/.env /root/.nvm/versions/node/v12.18.3/bin/serve -s build -l 3000 -n"
   },
   "eslintConfig": {
     "extends": "react-app"
