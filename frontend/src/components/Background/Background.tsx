@@ -7,22 +7,13 @@ interface BackgroundProps {
 
 }
 
-
-
 export const Background: FC<BackgroundProps> = () => {
-    const autoPlay: boolean = true;
-
-    // Hacky workaround for iOS loop
-    const handleVideoReset = () => {
-        let video = (document.getElementById("video") as HTMLVideoElement);
-        video.currentTime = 0
-        video.play()
-    };
     return (
-        <div className="background-container">
-            <video id="video" src={background} className="background-video" autoPlay={autoPlay} muted={true} playsInline={true} onEnded={handleVideoReset}>
-            </video>
-        </div>
+        <video className="background-video" autoPlay={true} muted={true} loop={true} playsInline={true} preload="auto">
+            <source src={background} type="video/mp4" />
+            <source src={background} type="video/ogg" />
+    Your browser does not support the video tag.
+        </video>
     )
 }
 
