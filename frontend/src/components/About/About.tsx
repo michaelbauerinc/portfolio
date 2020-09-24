@@ -39,7 +39,7 @@ export const About: FC<AboutProps> = () => {
                     <img src={headshot} alt="headshot"></img>
                 </div>
                 <div className="bottom-container">
-                    <p>I was born and raised in Wadsworth, Ohio - a small suburb right outside of Akron. I currently live in Gainesville, FL. Growing up, I had a very organic love affair with computers and technology.
+                    <p>I was born and raised in Wadsworth, Ohio - a small suburb right outside of Akron. I currently live in Gainesville, FL. Growing up, I had an organic love affair with computers and technology.
                     Around age 4, I had my first experience with a computer - the Macintosh LCIII. From that point on, it was off to the races.
                     </p>
                     <p>

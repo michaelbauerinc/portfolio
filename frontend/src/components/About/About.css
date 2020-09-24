@@ -43,7 +43,8 @@
     font-family: '8BITWONDERNominal';
     font-weight: normal;
     font-style: normal;
-    animation: slideInFromLeft 0.5s
+    animation: slideInFromLeft 0.5s, shake 0.6s ease-out;
+    animation-delay: 0s, 0.4s;
 }
 
 .about-container-content img {
