@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import './Background.css'
 // import { BackgroundProps } from './Background.Interface'
 interface BackgroundProps {
