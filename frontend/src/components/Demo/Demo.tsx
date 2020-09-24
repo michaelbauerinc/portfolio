@@ -9,11 +9,11 @@ import { HttpService } from '../../services/HttpService';
 
 export const Demo: FC = () => {
     const service = HttpService;
-    const [success, setSuccess] = useState(Boolean);
-    const [get, setGet] = useState(Boolean);
-    const [post, setPost] = useState(Boolean);
-    const [patch, setPatch] = useState(Boolean);
-    const [responseData, setResponseData] = useState([{ id: "", name: "", message: "" }])
+    const [success, setSuccess] = useState<boolean>(false);
+    const [get, setGet] = useState<boolean>(false);
+    const [post, setPost] = useState<boolean>(false);
+    const [patch, setPatch] = useState<boolean>(false);
+    const [responseData, setResponseData] = useState<object[]>([{ id: "", name: "", message: "" }])
     const { register, handleSubmit, errors } = useForm<Record<string, string>>()
 
 

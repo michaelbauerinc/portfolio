@@ -13,8 +13,8 @@ import { HttpService } from '../../services/HttpService';
 // }
 
 export const ContactForm: FC = () => {
-    const [success, setSuccess] = useState(Boolean);
     const service = HttpService;
+    const [success, setSuccess] = useState<boolean>(false);
     const { register, handleSubmit, errors } = useForm<Record<string, string>>()
     const onSubmit = (data: Record<string, string>) => service.post("/email", data)
         .then((response: AxiosResponse) => {
