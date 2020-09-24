@@ -5,11 +5,7 @@ events {
 http {
         server {
             listen 80;
-            listen 443 ssl;
             server_name ${FE_DOMAIN};
-
-            ssl_certificate /etc/nginx/ssl/portfolio.crt;
-            ssl_certificate /etc/nginx/ssl/portfolio.key;
 
             location / {
                 proxy_pass          http://frontend:3000/;
@@ -18,11 +14,7 @@ http {
         }
         server {
             listen 80;
-            listen 443 ssl;
             server_name ${BE_DOMAIN};
-
-            ssl_certificate /etc/nginx/ssl/portfolio.crt;
-            ssl_certificate_key /etc/nginx/ssl/portfolio.key;
 
                 location / {
                 proxy_pass          http://backend:5000/;
