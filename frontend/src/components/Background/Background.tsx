@@ -29,7 +29,6 @@ export const Background: FC<BackgroundProps> = () => {
             setVideoOnePosition(top)
             setVideoTwoPosition(bottom)
         }
-        console.log("playing video " + nextVideo)
         video.play()
     }
 
