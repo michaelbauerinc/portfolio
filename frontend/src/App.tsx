@@ -12,9 +12,9 @@ import Demo from './components/Demo/Demo';
 function App() {
   return (
     <div className="app">
+      <Background />
       <Router>
         <Navbar />
-        <Background />
         <div className="main">
           <Route path="/" exact component={SplashPage} />
           <Route path="/home" exact component={Home} />

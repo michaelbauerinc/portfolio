@@ -11,4 +11,5 @@ WORKDIR /nginx/utils
 RUN sh install-nginx.sh
 WORKDIR /nginx
 EXPOSE 80
+EXPOSE 443
 CMD ["sh", "start.sh"]
