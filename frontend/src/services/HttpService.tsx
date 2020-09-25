@@ -16,7 +16,6 @@ export class HttpService {
         }
     }
     static async get(endpoint: string, data: Record<string, string> | Record<string, boolean>) {
-        console.log(HttpService.BE_DOMAIN)
         try {
             let response: AxiosResponse = await this.axios.get(endpoint, { params: data })
             return response
