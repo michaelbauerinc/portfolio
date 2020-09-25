@@ -13,7 +13,7 @@ export const Demo: FC = () => {
     const [get, setGet] = useState<boolean>(false);
     const [post, setPost] = useState<boolean>(false);
     const [patch, setPatch] = useState<boolean>(false);
-    const [responseData, setResponseData] = useState<object[]>([{ id: "", name: "", message: "" }])
+    const [responseData, setResponseData] = useState([{ id: "", name: "", message: "" }])
     const { register, handleSubmit, errors } = useForm<Record<string, string>>()
 
 

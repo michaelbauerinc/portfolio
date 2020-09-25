@@ -18,7 +18,11 @@ http {
         }
         server {
             listen 80;
+            listen 443 ssl;
             server_name ${BE_DOMAIN};
+
+            ssl_certificate /etc/nginx/ssl/certificate.crt;
+            ssl_certificate_key /etc/nginx/ssl/private.key;
 
                 location / {
                 proxy_pass          http://backend:5000/;
