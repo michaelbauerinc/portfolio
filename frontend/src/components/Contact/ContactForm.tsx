@@ -31,7 +31,7 @@ export const ContactForm: FC = () => {
     if (!success) {
         return (
             <div className="contact-form-container">
-                <h1>Lets chat.</h1>
+                <h1>Let's chat.</h1>
                 < form onSubmit={handleSubmit(onSubmit)}>
                     <label htmlFor="name">Name</label>
                     <input ref={register({ required: true })} className="name" name="name" type="text"></input>
