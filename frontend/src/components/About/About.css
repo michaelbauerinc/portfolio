@@ -47,6 +47,10 @@
     animation-delay: 0s, 0.4s;
 }
 
+
+.about-container-content .top-container a {
+  color:rgb(115, 0, 153);
+}
 .about-container-content p {
   line-height: 1.5rem;
 }
@@ -66,13 +70,59 @@
 }
 
 .bottom-container {
-    padding: 5% 5%;
+    padding: 0% 5%;
     width: 90%;
     height: 50%;
 }
 
+.bottom-container .skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 5%;
+}
+
+.bottom-container .skills .typescript {
+  height: 20%;
+  width: 20%;
+  padding: 5% 0%;
+}
+
+.bottom-container .skills .docker {
+  height: 50%;
+  width: 50%;
+  padding: 5% 0%;
+}
+
+.bottom-container .skills .unity {
+  height: 45%;
+  width: 45%;
+  padding: 5% 0%;
+}
+
+.bottom-container .skills .sql {
+  height: 20%;
+  width: 20%;
+  padding: 5% 0%;
+}
+
+.bottom-container .skills .react {
+  height: 40%;
+  width: 40%;
+  padding: 5% 0%;
+}
+
+.bottom-container .skills img {
+  height: 25%;
+  width: 25%;
+  padding: 5% 0%;
+}
+
 .bottom-container h3 {
   color:rgb(115, 0, 153);
+  padding-top: 5%;
 }
 
 .about-container-content span {
@@ -84,10 +134,9 @@
 }
 
 
-/* .personality-graph {
-  height: 100%;
-  width: 100%;
-} */
+.bottom-container .personality-graph {
+  height: 500px;
+}
 
 
 @media (max-width: 824px) {

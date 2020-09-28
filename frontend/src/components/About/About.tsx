@@ -2,6 +2,19 @@ import React, { FC } from 'react'
 import './About.css'
 import { Bar } from "react-chartjs-2";
 import headshot from './headshot.jpg';
+import typescript from "./Assets/typescript.svg";
+import linux from "./Assets/linux.svg";
+import nginx from "./Assets/nginx.svg";
+import csharp from "./Assets/csharp.svg";
+import docker from "./Assets/docker.svg";
+import unity from "./Assets/unity.svg";
+import python from "./Assets/python.svg";
+import react from "./Assets/react-logo.svg";
+import angular from "./Assets/angular.svg";
+import sql from "./Assets/sql.svg";
+import aws from "./Assets/aws.svg";
+import gitlab from "./Assets/gitlab.svg";
+import resume from "./Assets/mike_bauer_resume.pdf";
 
 // import { AboutProps } from './About.Interface'
 
@@ -37,6 +50,7 @@ export const About: FC<AboutProps> = () => {
             <div className="about-container-content">
                 <div className="top-container">
                     <img src={headshot} alt="headshot"></img>
+                    <h3><a href={resume} target='_blank' rel="noopener noreferrer">View Resume</a></h3>
                 </div>
                 <div className="bottom-container">
                     <p>I was born and raised in Wadsworth, Ohio - a small suburb right outside of Akron. I currently live in Gainesville, FL. Growing up, I had an organic love affair with computers and technology.
@@ -65,6 +79,23 @@ export const About: FC<AboutProps> = () => {
                                 }
                             }}
                         />
+                    </div>
+                    <h3>At A Glance:</h3>
+                    <div className="skills">
+                        <img src={python} title="Python" alt="skill logo" />
+                        <img className="typescript" src={typescript} title="Typescript" alt="skill logo" />
+                        <img src={csharp} title="C#" alt="skill logo" />
+                        <img className="docker" src={docker} title="Docker" alt="skill logo" />
+                        <img src={nginx} title="Nginx" alt="skill logo" />
+                        <img className="react" src={react} title="React" alt="skill logo" />
+                        <img src={angular} title="Angular" alt="skill logo" />
+                        <img src={linux} title="Linux" alt="skill logo" />
+                        <img className="unity" src={unity} title="Unity 3D/2D" alt="skill logo" />
+                        <img className="sql" src={sql} title="SQL" alt="skill logo" />
+                        <img src={aws} title="Amazon Web Services" alt="skill logo" />
+                        <img src={gitlab} title="Gitlab CI" alt="skill logo" />
+
+
                     </div>
                 </div>
             </div>
