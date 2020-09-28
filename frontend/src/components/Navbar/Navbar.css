@@ -18,7 +18,7 @@
 .navbar-logo {
     margin-left: 1rem;
     text-decoration: none;
-    font-family: '8BITWONDERNominal';
+    font-family: 'PressStart2PRegular';
     font-weight: bold;
     font-style: normal;
     background-color:rgb(230, 250, 255);
@@ -48,7 +48,7 @@
 .navbar-items a {
     color: rgb(115, 0, 153);
     text-decoration: none;
-    font-family: '8BITWONDERNominal';
+    font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal;
 }
